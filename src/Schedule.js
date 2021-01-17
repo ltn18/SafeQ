@@ -5,7 +5,7 @@ const Schedule = () => {
   const [from, setFrom] = useState(8);
   const [to, setTo] = useState(8);
   const [duration, setDuration] = useState(5);
-  const [username, setUsername] = useState("Lam")
+  const [username, setUsername] = useState("Lam");
 
   const handleFromChange = (e) => {
     setFrom(e.target.value);
@@ -18,6 +18,10 @@ const Schedule = () => {
   const handleDurationChange = (e) => {
     setDuration(e.target.value);
   };
+
+  const handleSignout = () => {
+    
+  }
 
   const handleSchedule = () => {
     if (to <= from) console.log("Invalid working hour!");
@@ -38,7 +42,9 @@ const Schedule = () => {
           </Link>
           <div style={{marginRight: 30, marginTop: 15}}>
             <p style={{fontSize: 20}} className="typewriter">Hello {username}, let's schedule meetings!</p>
-            <button style={{marginLeft: 315, marginTop: 5, fontSize: 20}}>Sign out</button>
+            <Link to="/">
+              <button style={{marginLeft: 315, marginTop: 5, fontSize: 20}} onClick={handleSignout}>Sign out</button>
+            </Link>
           </div>
         </div>
 

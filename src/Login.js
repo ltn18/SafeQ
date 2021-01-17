@@ -28,7 +28,7 @@ const Login = () => {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ flexDirection: "column" }}>
             <div>
-              <h1>Login as Scheduler</h1>
+              <h1>Login</h1>
               <p>Email</p>
               <input type="email" onChange={handleEmailChange} name="email" style={{width: 300, height: 20}}/>
               <p>Password</p>
@@ -36,9 +36,14 @@ const Login = () => {
               <p>
                 <button style={{width: 100, height: 27}} onClick={handleSubmit}>LOGIN</button>
               </p>
-              <p style={{textDecoration: "underline"}}>Forgot your password?</p>
+              <Link to="/forget-password">
+                <p style={{textDecoration: "underline"}}>Forgot your password?</p>
+              </Link>
               <p>
-                Don't have an account? <span style={{textDecoration: "underline"}}>Register</span>
+                Don't have an account?&nbsp;&nbsp;
+                <Link to="/register">
+                  <span style={{textDecoration: "underline"}}>Register</span>
+                </Link>
               </p>
             </div>
           </div>
