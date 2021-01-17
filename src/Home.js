@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
 const Home = () => {
+  const [login, setLogin] = useState(true);
+
   return (
     <Router>
       <div style={{display: "flex", justifyContent: "center", fontFamily: "Roboto"}}>
@@ -30,7 +32,7 @@ const Home = () => {
                 <h2>Attend</h2>
               </button>
             </Link>
-            <Link to="/schedule">
+            <Link to={login? "/schedule" : "/login"}>
               <button className="button">
                 <img src="schedule.png" alt="schedule.png" style={{width: 75, height: 75}}/>
                 <h2>Schedule</h2>
