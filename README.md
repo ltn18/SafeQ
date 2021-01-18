@@ -15,3 +15,9 @@ Frontend is built with [React.js](https://reactjs.org/) and [React Router](https
 ### Backend
 Backend is under development. Tech stack using: [Node.js](https://nodejs.org/en/) and [Firebase](https://firebase.google.com/)
 
+## Open Positions for Collaboration
+- Frontend Developer
+- Backend Developer
+- Business Strategist
+- Media/Designer
+
