@@ -13,7 +13,7 @@ Flow is created using [Lucid](https://lucid.app/)
 Frontend is built with [React.js](https://reactjs.org/) and [React Router](https://reactrouter.com/)
 ![Frontend](/public/safeq.gif)
 ### Backend
-Backend is under development. Tech stack using: [Firebase](https://firebase.google.com/)
+Backend is under development. Tech stack using: [Firebase](https://firebase.google.com/) and [dotenv](https://www.npmjs.com/package/dotenv)
 ### Features
 - Authentication (Login/Sign out/Forget Password)
 - Database Searching
