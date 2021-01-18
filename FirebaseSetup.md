@@ -35,9 +35,9 @@ The outline for my project is: `Database Setup -> Functions Setup -> Hosting Set
 ### Database Setup
 ![image](/public/firebaseSetup/database-setup.PNG)
 I will go step by step explaining what the command lines are.\
-- `database: ...`: Firebase will ask you whether `firebasedatabase.googleapis.com` is enabled or not. If it appears to be missing, then you will have to enable it. This task is fairly easy since you only have to click `ENTER` to enable your API.\
+- `database: ...`: Firebase will ask you whether `firebasedatabase.googleapis.com` is enabled or not. If it appears to be missing, then you will have to enable it. This task is fairly easy since you only have to click `ENTER` to enable your API.
 - `Realtime Database`: If you haven't initialized Realtime Database in your project, you have to set it up by typing `y` next to `y/N`. After this, you will choose the location for your default Realtime Database instance. In this project, I will use `us-central`. You will succesfully initialize the project when you receive the message: 
-`Creating your default Realtime Database instance: abcde-f01f0-default-rtdb`.\
-- `Firebase Realtime Database Security Rules`: This will allow you to define how your data should be structured and when your data can be read from and written to. When asked `What file should be used for Realtime Database Security Rules?`, you can type whatever name you like, but I recommend using the default `database.rules.json`.\
+`Creating your default Realtime Database instance: abcde-f01f0-default-rtdb`.
+- `Firebase Realtime Database Security Rules`: This will allow you to define how your data should be structured and when your data can be read from and written to. When asked `What file should be used for Realtime Database Security Rules?`, you can type whatever name you like, but I recommend using the default `database.rules.json`.
 > If you follow my guidelines, you will then be moved to the next setup if you have one.
 
