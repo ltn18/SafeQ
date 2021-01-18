@@ -1,7 +1,6 @@
 # Firebase Setup
----
+
 ## Table of Content
----
 - [About](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#about)
 - [Technical](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#technical)
   * [Initialization](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#initialization)
@@ -10,16 +9,14 @@
   * [Functions Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#functions-setup)
 
 ## About
----
 [Firebase](https://firebase.google.com/) is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.
 This post is an instruction on how to set up firebase project.
 While developing [SafeQ](https://github.com/ltn18/), I faced some difficulties in setting up Firebase project.
 I hope that this may help you one way or another. Okay let's get to work!
 
 ## Technical
----
+
 ### Initialization
----
 `firebase init`: this will initialize your firebase project\
 After this, you will choose the services that firebase provides. I this project, I clicked `SPACE` on 
 the services I want to utilize.
@@ -39,7 +36,6 @@ the services I want to utilize.
 The outline for my project is: `Database Setup -> Functions Setup -> Hosting Setup`
 
 ### Database Setup
----
 ![image](/public/firebaseSetup/database-setup.PNG)
 I will go step by step explaining what the command lines are.
 - `database: ...`: Firebase will ask you whether `firebasedatabase.googleapis.com` is enabled or not. If it appears to be missing, then you will have to enable it. This task is fairly easy since you only have to click `ENTER` to enable your API.
@@ -49,5 +45,4 @@ I will go step by step explaining what the command lines are.
 > If you follow my guidelines, you will then be moved to the next setup if you have one.
 
 ### Functions Setup
----
 ![image](/public/firebaseSetup/functions-setup.PNG)
