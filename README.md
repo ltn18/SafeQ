@@ -10,7 +10,7 @@ As a founder of this project, my vision is to apply the use of technology, espec
 Flow is created using [Lucid](https://lucid.app/)
 ![Flow image](/public/lucidflow.PNG)
 ### Frontend
-Frontend is built with [React.js](https://reactjs.org/) and [React Router](https://reactrouter.com/)
+Frontend is built with [React.js](https://reactjs.org/) and [React Router](https://reactrouter.com/).
 ![Frontend](/public/safeq.gif)
 ### Backend
 Backend is under development. Tech stack using: [Firebase](https://firebase.google.com/) and [dotenv](https://www.npmjs.com/package/dotenv)
@@ -18,6 +18,9 @@ Backend is under development. Tech stack using: [Firebase](https://firebase.goog
 - Authentication (Login/Sign out/Forget Password)
 - Database Searching
 - Confirmation Email Sending
+### Setup
+[Reactjs Setup](https://github.com/ltn18/SafeQ/blob/main/ReactjsSetup.md)
+[Firebase Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md)
 
 ## Open Positions for Collaboration
 - Frontend Developer
