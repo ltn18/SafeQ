@@ -45,3 +45,16 @@ I will go step by step explaining what the command lines are.
 
 ### Functions Setup
 ![image](/public/firebaseSetup/functions-setup.PNG)
+I chose `JavaScript` as a language to write Cloud Functions. There are two options for you to choose from: 
+either `JavaScript` or `TypeScript`.\
+`Do you want to use ESLint to catch probable bugs and enforce style?` I chose `y` in `y/N`. This will tell
+Firebase to write some files to your project.\
+Lastly, I chose to install dependencies with npm. This will be helpful in the future when I want to deploy.
+
+### Hosting Setup
+![image](/public/firebaseSetup/hosting-setup.PNG)
+In this section, I configured my Firebase to have `public directory` and chose `Yes` to configure as a `single-page app`. Deployment with GitHub is not mandatory, you can skip this part. If you want to deploy using GitHub, follow the instructions given by Firebase, I think it is fairly clear. 
+
+### End Note
+If you setup your project correctly, you will receive a message as follow:
+![image](/public/firebaseSetup/success-setup.PNG)
