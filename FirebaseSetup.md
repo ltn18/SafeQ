@@ -10,6 +10,6 @@ I hope that this may help you one way or another. Okay let's get to work!
 After this, you will choose the services that firebase provides. I this project, I chose:
 - Database: Configure Firebase Realtime Database and deploy riles
 - Functions: Configure and deploy Cloud Functions
-- Hosting: Configure and deploy Firebase Hosting sites\
-However, the possibilities are endless. Feel free to explore more services!
+- Hosting: Configure and deploy Firebase Hosting sites
+\However, the possibilities are endless. Feel free to explore more services!
 ![image](/public/firebaseSetup/firebase-init.PNG)  
