@@ -9,7 +9,9 @@ As a founder of this project, my vision is to apply the use of technology, espec
 ### Flow
 Flow is created using [Lucid](https://lucid.app/)
 ![Flow image](/public/lucidflow.PNG)
-
 ### Frontend
 Frontend is built with [React.js](https://reactjs.org/) and [React Router](https://reactrouter.com/)
 ![Frontend](/public/safeq.gif)
+### Backend
+Backend is under development. Tech stack using: [Node.js](https://nodejs.org/en/) and [Firebase](https://firebase.google.com/)
+
