@@ -43,4 +43,4 @@ I will go step by step explaining what the command lines are.
 > If you follow my guidelines, you will then be moved to the next setup if you have one.
 
 ### Functions Setup
-![image](/public/firebaseSetup/functions-setup)
+![image](/public/firebaseSetup/functions-setup.PNG)
