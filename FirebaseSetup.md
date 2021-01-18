@@ -7,6 +7,8 @@
   * [Project Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#project-setup)
   * [Database Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#database-setup)
   * [Functions Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#functions-setup)
+  * [Hosting Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#hosting-setup)
+- [End Note](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#end-note)
 
 ## About
 [Firebase](https://firebase.google.com/) is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.
@@ -56,5 +58,6 @@ Lastly, I chose to install dependencies with npm. This will be helpful in the fu
 In this section, I configured my Firebase to have `public directory` and chose `Yes` to configure as a `single-page app`. Deployment with GitHub is not mandatory, you can skip this part. If you want to deploy using GitHub, follow the instructions given by Firebase, I think it is fairly clear. 
 
 ### End Note
-If you setup your project correctly, you will receive a message as follow:
-![image](/public/firebaseSetup/success-setup.PNG)
+If you setup your project correctly, you will receive a message as follows:\
+![image](/public/firebaseSetup/success-setup.PNG)\
+Thank you for reading my [Firebase Setup Note](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#firebase-setup). Hope that this helps you setting up your `Firebase` project!
