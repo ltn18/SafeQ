@@ -14,6 +14,10 @@ Frontend is built with [React.js](https://reactjs.org/) and [React Router](https
 ![Frontend](/public/safeq.gif)
 ### Backend
 Backend is under development. Tech stack using: [Node.js](https://nodejs.org/en/) and [Firebase](https://firebase.google.com/)
+### Features
+- Authentication (Login/Sign out/Forget Password)
+- Database Searching
+- Confirmation Email Sending
 
 ## Open Positions for Collaboration
 - Frontend Developer
