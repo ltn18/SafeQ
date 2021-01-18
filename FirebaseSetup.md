@@ -21,6 +21,7 @@ However, the possibilities are endless. Feel free to explore more services!
 `abcde-f01f0 (abcde)`: this is an example of a default Firebase project for the directory
 ![image](/public/firebaseSetup/project-setup.PNG)  
 
-> The following are customized for your choices on the services you picked earlier. The outline for my
-project will be `Database Setup -> Functions Setup -> Hosting Setup`.
+**The following are customized for your choices on the services you picked earlier.** 
+The outline for my project will be `Database Setup -> Functions Setup -> Hosting Setup`
+
 ### Database Setup
