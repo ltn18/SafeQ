@@ -9,3 +9,5 @@
 * Complete frontend for Forget Password and Register
 * What about adding date to schedule office hour page?
 * Reset after a day?
+### Flow
+[User flow](https://lucid.app/lucidchart/invitations/accept/f33993fa-28f4-46a1-ac3e-de0d013b74ec)

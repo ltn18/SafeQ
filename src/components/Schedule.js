@@ -41,9 +41,9 @@ const Schedule = () => {
             </button>
           </Link>
           <div style={{marginRight: 30, marginTop: 15}}>
-            <p style={{fontSize: 20}} className="typewriter">Hello {username}, let's schedule meetings!</p>
+            <p style={{fontSize: 20}} className="typewriter">Hi, {username}!</p>
             <Link to="/">
-              <button style={{marginLeft: 315, marginTop: 5, fontSize: 20}} onClick={handleSignout}>Sign out</button>
+              <button style={{marginTop: 5, fontSize: 20}} onClick={handleSignout}>Sign out</button>
             </Link>
           </div>
         </div>

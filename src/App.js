@@ -5,11 +5,13 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from "./Home";
-import Attend from "./Attend";
-import Schedule from "./Schedule";
-import Login from "./Login";
-import Confirmation from "./Confirmation";
+import Home from "./components/Home";
+import Attend from "./components/Attend";
+import Schedule from "./components/Schedule";
+import Login from "./components/Login";
+import Confirmation from "./components/Confirmation";
+import ForgetPassword from "./components/ForgetPassword";
+import Register from "./components/Register";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
       <Route exact path="/attend" component={Attend}></Route>
       <Route exact path="/schedule" component={Schedule}></Route>
       <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/forget-password" component={ForgetPassword}></Route>
+      <Route exact path="/register" component={Register}></Route>
       <Route path="/:email/:slot" component={Confirmation}></Route>
     </Router>
   )
