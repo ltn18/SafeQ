@@ -1,7 +1,11 @@
 ## SafeQ
-### About
+## About
+### Description
 Realizing that social distancing has been one of the hottest topic in the past 2 years, my team has developed SafeQ, which I believe is the best solution for queueing during Covid-19. This solution enables people to arrive just-in-time for appointments, which significantly minimizes crowdedness of any office. SafeQ guarantees safe queueing environments!
+### Words from Founder
+As a founder of this project, my vision is to apply the use of technology, especially MERN Stack, in carrying out social goods. I believe that this project has partially expressed how passionate I am along the road of becoming an innovative software engineer who craves for a better world. This project has a friendly design, which I hope will make your experience enjoyable. I'm also recruiting members to develop this project along my way of achieving my goal. If you are interested, you may apply via [safeqinc@gmail.com](mailto:safeqinc@gmail.com)
 
+## Technical
 ### Flow
 Flow is created using [Lucid](https://lucid.app/)
 ![Flow image](/public/lucidflow.PNG)
