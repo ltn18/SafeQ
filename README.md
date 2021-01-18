@@ -19,8 +19,8 @@ Backend is under development. Tech stack using: [Firebase](https://firebase.goog
 - Database Searching
 - Confirmation Email Sending
 ### Setup
-[Reactjs Setup](https://github.com/ltn18/SafeQ/blob/main/ReactjsSetup.md)
-[Firebase Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md)
+- [Reactjs Setup](https://github.com/ltn18/SafeQ/blob/main/ReactjsSetup.md)
+- [Firebase Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md)
 
 ## Open Positions for Collaboration
 - Frontend Developer
