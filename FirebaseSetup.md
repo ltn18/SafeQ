@@ -1,4 +1,12 @@
 # Firebase Setup
+
+## Table of Content
+- [About](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#about)
+- [Technical](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#technical)
+  * [Initialization](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#initialization)
+  * [Project Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#project-setup)
+  * [Database Setup](https://github.com/ltn18/SafeQ/blob/main/FirebaseSetup.md#database-setup)
+
 ## About
 [Firebase](https://firebase.google.com/) is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.
 This post is an instruction on how to set up firebase project.
@@ -7,7 +15,7 @@ I hope that this may help you one way or another. Okay let's get to work!
 
 ## Technical
 ### Initialization
-`firebase init`: this will initialize your firebase project.\
+`firebase init`: this will initialize your firebase project\
 After this, you will choose the services that firebase provides. I this project, I clicked `SPACE` on 
 the services I want to utilize.
 - [x] Database: Configure Firebase Realtime Database and deploy riles
@@ -21,7 +29,9 @@ the services I want to utilize.
 `abcde-f01f0 (abcde)`, which is an example of a default Firebase project for the directory
 ![image](/public/firebaseSetup/project-setup.PNG)  
 
-### The following are customized for your choices on the services you picked earlier. 
+### The following are customized for your choices on the services you picked earlier 
 The outline for my project is: `Database Setup -> Functions Setup -> Hosting Setup`
 
 ### Database Setup
+![image](/public/firebaseSetup/database-setup.PNG)
+I will go step by step explaining  
