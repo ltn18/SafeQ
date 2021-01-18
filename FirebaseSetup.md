@@ -14,7 +14,7 @@ the services I want to utilize.
 - [x] Functions: Configure and deploy Cloud Functions
 - [x] Hosting: Configure and deploy Firebase Hosting sites
 ![image](/public/firebaseSetup/firebase-init.PNG)  
-However, the possibilities are endless. Feel free to explore more services!
+> However, the possibilities are endless. Feel free to explore more services!
 
 ### Project Setup
 `Use an exisitng project`: this will let firebase use the project you are developing
@@ -22,6 +22,6 @@ However, the possibilities are endless. Feel free to explore more services!
 ![image](/public/firebaseSetup/project-setup.PNG)  
 
 **The following are customized for your choices on the services you picked earlier.** 
-The outline for my project will be `Database Setup -> Functions Setup -> Hosting Setup`
+> The outline for my project is: `Database Setup -> Functions Setup -> Hosting Setup`
 
 ### Database Setup
