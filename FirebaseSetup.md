@@ -6,11 +6,10 @@ While developing [SafeQ](https://github.com/ltn18/), I faced some difficulties i
 I hope that this may help you one way or another. Okay let's get to work!
 
 ## Technical
-`firebase init`: this will start your firebase project.\
-After this, you will choose the services that firebase provides.\
-I this project, I chose:
+`firebase init`: this will initialize your firebase project.\
+After this, you will choose the services that firebase provides. I this project, I chose:
 - Database: Configure Firebase Realtime Database and deploy riles
 - Functions: Configure and deploy Cloud Functions
-- Hosting: Configure and deploy Firebase Hosting sites
+- Hosting: Configure and deploy Firebase Hosting sites\
 However, the possibilities are endless. Feel free to explore more services!
 ![image](/public/firebaseSetup/firebase-init.PNG)  
