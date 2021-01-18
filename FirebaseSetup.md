@@ -1,6 +1,6 @@
 # Firebase Setup
 ## About
-Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.
+[Firebase](https://firebase.google.com/) is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.
 This post is an instruction on how to set up firebase project.
 While developing [SafeQ](https://github.com/ltn18/), I faced some difficulties in setting up Firebase project.
 I hope that this may help you one way or another. Okay let's get to work!
