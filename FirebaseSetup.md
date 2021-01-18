@@ -7,9 +7,10 @@ I hope that this may help you one way or another. Okay let's get to work!
 
 ## Technical
 `firebase init`: this will initialize your firebase project.\
-After this, you will choose the services that firebase provides. I this project, I chose:
-- Database: Configure Firebase Realtime Database and deploy riles
-- Functions: Configure and deploy Cloud Functions
-- Hosting: Configure and deploy Firebase Hosting sites
+After this, you will choose the services that firebase provides. I this project, I clicked `SPACE` on 
+the services I want to utilize.
+[x]Database: Configure Firebase Realtime Database and deploy riles
+[x]Functions: Configure and deploy Cloud Functions
+[x]Hosting: Configure and deploy Firebase Hosting sites
 ![image](/public/firebaseSetup/firebase-init.PNG)  
 However, the possibilities are endless. Feel free to explore more services!
