@@ -27,7 +27,6 @@ the services I want to utilize.
 > However, the possibilities are endless. Feel free to explore more services!
 
 ### Project Setup
----
 `Use an exisitng project`: this will let firebase use the project you are developing
 `abcde-f01f0 (abcde)`, which is an example of a default Firebase project for the directory
 ![image](/public/firebaseSetup/project-setup.PNG)  
