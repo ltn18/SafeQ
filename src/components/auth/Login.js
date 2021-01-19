@@ -48,7 +48,7 @@ const Login = () => {
               </p>
               <p
                 onClick={() => history.push("/forget-password")}
-                style={{ textDecoration: "underline" }}
+                style={{ textDecoration: "underline", cursor: "pointer" }}
               >
                 Forgot your password?
               </p>
@@ -56,7 +56,7 @@ const Login = () => {
                 Don't have an account?&nbsp;&nbsp;
                 <span
                   onClick={() => history.push("/register")}
-                  style={{ textDecoration: "underline" }}
+                  style={{ textDecoration: "underline", cursor: "pointer" }}
                 >
                   Register
                 </span>

@@ -1,21 +1,16 @@
+// PACKAGES
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+
+// SERVICES
 import history from "../../services/history";
 
 const NavBar = () => {
-  const handleBackButton = () => {
-    history.back();
-  };
-
-  const handleHomeButton = () => {
-    history.push("/home");
-  };
-
   return (
     <Router history={history}>
       <div>
         <button
-          onClick={handleBackButton}
+          onClick={() => history.back()}
           className="backButton btn"
           style={{ backgroundColor: "red" }}
         >
@@ -24,7 +19,7 @@ const NavBar = () => {
           </span>
         </button>
         <button
-          onClick={handleHomeButton}
+          onClick={() => history.push("/home")}
           className="backButton"
           style={{ backgroundColor: "#006400" }}
         >

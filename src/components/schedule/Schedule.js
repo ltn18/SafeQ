@@ -1,52 +1,33 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Link, useHistory, useLocation } from "react-router-dom";
+// PACKAGES
+import React, { useRef } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// SERVICES
+import history from "../../services/history";
+
+// COMPONENTS
 import NavBar from "../navbar/NavBar";
 import Signout from "../navbar/Signout";
 
 const Schedule = () => {
-  const [from, setFrom] = useState(8);
-  const [to, setTo] = useState(8);
-  const [duration, setDuration] = useState(5);
-  const [username, setUsername] = useState("Lam");
-  const history = useHistory();
-  // const prev = useState(useLocation().pathname);
-
-  const handleFromChange = (e) => {
-    setFrom(e.target.value);
-  };
-
-  const handleToChange = (e) => {
-    setTo(e.target.value);
-  };
-
-  const handleDurationChange = (e) => {
-    setDuration(e.target.value);
-  };
-
-  const handleSignout = () => {
-    
-  }
+  const from = useRef();
+  const to = useRef();
+  const date = useRef();
 
   const handleSchedule = () => {
-    console.log(history);
-    if (to <= from) console.log("Invalid working hour!");
+    if (date.current.valueAsDate != null) {
+      console.log(date.current.value.toString().split("-").slice(0, 4).map(i => parseInt(i)));
+      console.log(date);
+    }
+    console.log(from.current.value + " " + to.current.value);
+    if (date.current.valueAsDate == null || parseInt(to.current.value) <= parseInt(from.current.value)) console.log("Invalid Schedule");
     else {
-      console.log(from + " " + to + " " + duration);
       console.log("Successful Schedule");
     }
   };
-
-  const handleBackButton = () => {
-    history.pop();
-    console.log(history)
-  };
-
-  const handleHomeButton = () => {
-    history.push("/home");
-  };
-
+  
   return (
-    <Router>
+    <Router history={history}>
       <div style={{ fontFamily: "Roboto" }}>
         <div style={{display: "flex", justifyContent: "space-between"}}>
           <NavBar />
@@ -60,7 +41,7 @@ const Schedule = () => {
               
               <div style={{display: "flex", marginBottom: 20}}>
                 <p style={{ marginRight: 10 }}>Date</p>
-                <input type="date"/>
+                <input type="date" ref={date}/>
               </div>
 
               <div style={{ display: "flex", marginBottom: 20 }}>
@@ -68,7 +49,7 @@ const Schedule = () => {
                 <select
                   style={{ marginRight: 10 }}
                   name="from"
-                  onChange={handleFromChange}
+                  ref={from}
                 >
                   <option value={8}>8:00 AM</option>
                   <option value={9}>9:00 AM</option>
@@ -88,7 +69,7 @@ const Schedule = () => {
                 <select
                   style={{ marginLeft: 10 }}
                   name="to"
-                  onChange={handleToChange}
+                  ref={to}
                 >
                   <option value={8}>8:00 AM</option>
                   <option value={9}>9:00 AM</option>
@@ -109,35 +90,6 @@ const Schedule = () => {
               <div style={{ display: "flex", marginBottom: 10 }}>
                 <p><b>Estimated Meeting Time:</b> 15 minutes</p>
               </div>
-
-              {/* <div style={{ display: "flex", marginBottom: 20 }}>
-                <p style={{ marginRight: 10 }}>Duration of a meeting</p>
-                <select name="duration" onChange={handleDurationChange}>
-                  <option value={5}>5 minutes</option>
-                  <option value={10}>10 minutes</option>
-                  <option value={15}>15 minutes</option>
-                  <option value={20}>20 minutes</option>
-                  <option value={25}>25 minutes</option>
-                  <option value={30}>30 minutes</option>
-                  <option value={35}>35 minutes</option>
-                  <option value={40}>40 minutes</option>
-                  <option value={45}>45 minutes</option>
-                  <option value={50}>50 minutes</option>
-                  <option value={55}>55 minutes</option>
-                  <option value={60}>60 minutes</option>
-                </select>
-              </div> */}
-
-              {/* <p>
-                <b>
-                  Estimated meetings count:{" "}
-                  <span style={{ color: "red" }}>
-                    {to - from <= 0
-                      ? 0
-                      : Math.trunc(((to - from) * 60) / duration)}
-                  </span>
-                </b>
-              </p> */}
 
               <button
                 style={{ width: 100, height: 50, marginTop: 10 }}

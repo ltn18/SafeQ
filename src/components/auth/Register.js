@@ -100,8 +100,8 @@ const Register = () => {
               <p>
                 Already have an account?&nbsp;&nbsp;
                 <span
-                  onClick={() => history.push("login")}
-                  style={{ textDecoration: "underline" }}
+                  onClick={() => history.push("/login")}
+                  style={{ textDecoration: "underline", cursor: "pointer" }}
                 >
                   Login
                 </span>

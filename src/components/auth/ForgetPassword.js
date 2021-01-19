@@ -1,8 +1,13 @@
+// PACKAGES
 import React, { useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+
+// SERVICES
 import history from "../../services/history";
 
+// COMPONENTS
 import NavBar from "../navbar/NavBar";
+import Signout from "../navbar/Signout";
 
 const ForgetPassword = () => {
   const email = useRef();
@@ -14,7 +19,9 @@ const ForgetPassword = () => {
   return (
     <Router history={history}>
       <div style={{ fontFamily: "Roboto" }}>
-        <NavBar />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <NavBar />
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ flexDirection: "column" }}>
             <div>
@@ -36,14 +43,12 @@ const ForgetPassword = () => {
               </p>
               <p>
                 Don't have an account?&nbsp;&nbsp;
-                <Link to="/register">
-                  <span
-                    onClick={() => history.push("/register")}
-                    style={{ textDecoration: "underline" }}
-                  >
-                    Register
-                  </span>
-                </Link>
+                <span
+                  onClick={() => history.push("/register")}
+                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  Register
+                </span>
               </p>
             </div>
           </div>

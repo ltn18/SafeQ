@@ -1,17 +1,12 @@
+// PACKAGES
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// SERVICES
 import history from "../../services/history";
 
 const Signout = () => {
   const [username, setUsername] = useState("Lam");
-
-  const handleSignout = () => {
-    history.push("/home");
-  };
-
-  const handleSettings = () => {
-    history.push("/settings");
-  };
 
   return (
     <Router history={history}>
@@ -22,17 +17,15 @@ const Signout = () => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <button
             style={{ marginTop: 5, fontSize: 20 }}
-            onClick={handleSettings}
+            onClick={() => history.push("/settings")}
           >
-            <i className="fa fa-id-card"></i>&nbsp;
-            Settings
+            <i className="fa fa-id-card"></i>&nbsp; Settings
           </button>
           <button
             style={{ marginTop: 5, fontSize: 20 }}
-            onClick={handleSignout}
+            onClick={() => history.push("/home")}
           >
-            <i className="fa fa-sign-out"></i>&nbsp;
-            Logout
+            <i className="fa fa-sign-out"></i>&nbsp; Logout
           </button>
         </div>
       </div>

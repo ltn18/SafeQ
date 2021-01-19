@@ -57,7 +57,7 @@ const Home = () => {
             love to know what you think about SafeQ.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button onClick={() => history.push("/attend")} className="button">
+            <button onClick={() => history.push(login ? "/attend" : "/login")} className="button">
               <img
                 src="attend.png"
                 alt="attend.png"
