@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, useHistory, useLocation } from "react-router-dom";
+import NavBar from "../navbar/NavBar";
+import Signout from "../navbar/Signout";
 
 const Schedule = () => {
   const [from, setFrom] = useState(8);
   const [to, setTo] = useState(8);
   const [duration, setDuration] = useState(5);
   const [username, setUsername] = useState("Lam");
+  const history = useHistory();
+  // const prev = useState(useLocation().pathname);
 
   const handleFromChange = (e) => {
     setFrom(e.target.value);
@@ -24,6 +28,7 @@ const Schedule = () => {
   }
 
   const handleSchedule = () => {
+    console.log(history);
     if (to <= from) console.log("Invalid working hour!");
     else {
       console.log(from + " " + to + " " + duration);
@@ -31,30 +36,34 @@ const Schedule = () => {
     }
   };
 
+  const handleBackButton = () => {
+    history.pop();
+    console.log(history)
+  };
+
+  const handleHomeButton = () => {
+    history.push("/home");
+  };
+
   return (
     <Router>
       <div style={{ fontFamily: "Roboto" }}>
         <div style={{display: "flex", justifyContent: "space-between"}}>
-          <Link to="/home">
-            <button className="backButton">
-              <span style={{ fontSize: 18 }}>Return Home</span>
-            </button>
-          </Link>
-          <div style={{marginRight: 30, marginTop: 15}}>
-            <p style={{fontSize: 20}} className="typewriter">Hi, {username}!</p>
-            <Link to="/">
-              <button style={{marginTop: 5, fontSize: 20}} onClick={handleSignout}>Sign out</button>
-            </Link>
-          </div>
+          <NavBar />
+          <Signout />
         </div>
 
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ flexDirection: "column" }}>
             <div>
               <h1>Schedule Office Hour</h1>
-              <p>Work Hour</p>
+              
+              <div style={{display: "flex", marginBottom: 20}}>
+                <p style={{ marginRight: 10 }}>Date</p>
+                <input type="date"/>
+              </div>
 
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", marginBottom: 20 }}>
                 <p style={{ marginRight: 10 }}>From</p>
                 <select
                   style={{ marginRight: 10 }}
@@ -97,7 +106,11 @@ const Schedule = () => {
                 </select>
               </div>
 
-              <div style={{ display: "flex", marginTop: 20 }}>
+              <div style={{ display: "flex", marginBottom: 10 }}>
+                <p><b>Estimated Meeting Time:</b> 15 minutes</p>
+              </div>
+
+              {/* <div style={{ display: "flex", marginBottom: 20 }}>
                 <p style={{ marginRight: 10 }}>Duration of a meeting</p>
                 <select name="duration" onChange={handleDurationChange}>
                   <option value={5}>5 minutes</option>
@@ -113,9 +126,9 @@ const Schedule = () => {
                   <option value={55}>55 minutes</option>
                   <option value={60}>60 minutes</option>
                 </select>
-              </div>
+              </div> */}
 
-              <p>
+              {/* <p>
                 <b>
                   Estimated meetings count:{" "}
                   <span style={{ color: "red" }}>
@@ -124,7 +137,7 @@ const Schedule = () => {
                       : Math.trunc(((to - from) * 60) / duration)}
                   </span>
                 </b>
-              </p>
+              </p> */}
 
               <button
                 style={{ width: 100, height: 50, marginTop: 10 }}

@@ -1,17 +1,16 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Link,
   Route
 } from "react-router-dom";
 
-import Home from "./components/Home";
-import Attend from "./components/Attend";
-import Schedule from "./components/Schedule";
-import Login from "./components/Login";
-import Confirmation from "./components/Confirmation";
-import ForgetPassword from "./components/ForgetPassword";
-import Register from "./components/Register";
+import Home from "./components/home/Home";
+import Attend from "./components/attend/Attend";
+import Schedule from "./components/schedule/Schedule";
+import Login from "./components/auth/Login";
+import Confirmation from "./components/attend/Confirmation";
+import ForgetPassword from "./components/auth/ForgetPassword";
+import Register from "./components/auth/Register";
 
 const App = () => {
   return (

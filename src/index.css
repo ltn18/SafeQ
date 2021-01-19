@@ -48,7 +48,6 @@ button {
 .backButton {
   cursor: pointer;
   height: 50px;
-  background-color: #006400;
   color: white;
   border: none;
 }
