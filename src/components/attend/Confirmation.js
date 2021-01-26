@@ -57,14 +57,20 @@ const Confirmation = () => {
                 ref={notes}
                 name="notes"
                 style={{
-                  width: 400,
+                  width: 420,
                   height: 125,
                   overflowWrap: "break-word",
+                  resize: "none",
                 }}
               />
               <p>
                 <button
-                  style={{ width: 100, height: 27 }}
+                  style={{
+                    width: 100,
+                    height: 27,
+                    color: "white",
+                    backgroundColor: "#006400",
+                  }}
                   onClick={handleSubmit}
                 >
                   SUBMIT
