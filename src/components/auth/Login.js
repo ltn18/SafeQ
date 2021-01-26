@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // SERVICES
 import history from "../../services/history";
+import { auth, db, storage } from "../../services/firebase";
 
 // COMPONENTS
 import NavBar from "../navbar/NavBar";
@@ -13,7 +14,10 @@ const Login = () => {
   const password = useRef();
 
   const handleSubmit = () => {
-    console.log(email.current.value + " " + password.current.value);
+    auth.signInWithEmailAndPassword(email.current.value, password.current.value)
+        .then(user => console.log(user))
+        .catch(error => console.log(error))
+    // console.log(email.current.value + " " + password.current.value);
   };
 
   return (
@@ -29,18 +33,18 @@ const Login = () => {
                 type="email"
                 ref={email}
                 name="email"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
               <p>Password</p>
               <input
                 type="password"
                 ref={password}
                 name="password"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
               <p>
                 <button
-                  style={{ width: 100, height: 27 }}
+                  style={{ width: 100, height: 27, color: "white", backgroundColor: "#006400"  }}
                   onClick={handleSubmit}
                 >
                   LOGIN
@@ -48,7 +52,7 @@ const Login = () => {
               </p>
               <p
                 onClick={() => history.push("/forget-password")}
-                style={{ textDecoration: "underline", cursor: "pointer" }}
+                style={{ textDecoration: "underline", cursor: "pointer", color: "#006400" }}
               >
                 Forgot your password?
               </p>
@@ -56,7 +60,7 @@ const Login = () => {
                 Don't have an account?&nbsp;&nbsp;
                 <span
                   onClick={() => history.push("/register")}
-                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                  style={{ textDecoration: "underline", cursor: "pointer", color: "#006400" }}
                 >
                   Register
                 </span>

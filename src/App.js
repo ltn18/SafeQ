@@ -11,6 +11,7 @@ import Login from "./components/auth/Login";
 import Confirmation from "./components/attend/Confirmation";
 import ForgetPassword from "./components/auth/ForgetPassword";
 import Register from "./components/auth/Register";
+import Settings from "./components/settings/Settings";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route exact path="/login" component={Login}></Route>
       <Route exact path="/forget-password" component={ForgetPassword}></Route>
       <Route exact path="/register" component={Register}></Route>
+      <Route exact path="/settings" component={Settings}></Route>
       <Route path="/:email/:slot" component={Confirmation}></Route>
     </Router>
   )

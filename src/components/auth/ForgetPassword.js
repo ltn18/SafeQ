@@ -19,10 +19,8 @@ const ForgetPassword = () => {
   return (
     <Router history={history}>
       <div style={{ fontFamily: "Roboto" }}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <NavBar />
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <NavBar />
+        <div style={{ display: "flex", justifyContent: "center", marginTop: 30 }}>
           <div style={{ flexDirection: "column" }}>
             <div>
               <h1>Reset Password</h1>
@@ -35,7 +33,7 @@ const ForgetPassword = () => {
               />
               <p>
                 <button
-                  style={{ width: 100, height: 27 }}
+                  style={{ width: 100, height: 27, color: "white", backgroundColor: "#006400" }}
                   onClick={handleSubmit}
                 >
                   RESET
@@ -45,7 +43,7 @@ const ForgetPassword = () => {
                 Don't have an account?&nbsp;&nbsp;
                 <span
                   onClick={() => history.push("/register")}
-                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                  style={{ textDecoration: "underline", cursor: "pointer", color: "#006400" }}
                 >
                   Register
                 </span>

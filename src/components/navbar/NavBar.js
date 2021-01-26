@@ -10,15 +10,6 @@ const NavBar = () => {
     <Router history={history}>
       <div>
         <button
-          onClick={() => history.back()}
-          className="backButton btn"
-          style={{ backgroundColor: "red" }}
-        >
-          <span style={{ fontSize: 18 }}>
-            <i class="fa fa-arrow-left"></i>&nbsp;Back
-          </span>
-        </button>
-        <button
           onClick={() => history.push("/home")}
           className="backButton"
           style={{ backgroundColor: "#006400" }}

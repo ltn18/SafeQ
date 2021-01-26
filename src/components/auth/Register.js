@@ -1,6 +1,9 @@
 // PACKAGES
-import React, { useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+
+// COMPONENTS
+import NavBar from "../navbar/NavBar";
 
 // SERVICES
 import history from "../../services/history";
@@ -12,6 +15,11 @@ const Register = () => {
   const firstName = useRef();
   const lastName = useRef();
   const address = useRef();
+  const [isDoctor, setIsDoctor] = useState(false);
+  const [skill, setSkill] = useState();
+  const [skillTags, setSkillTags] = useState([]);
+  const [condition, setCondition] = useState();
+  const [conditionTags, setConditionTags] = useState([]);
 
   const handleSubmit = () => {
     console.log(email.current.value);
@@ -20,78 +28,156 @@ const Register = () => {
     console.log(firstName.current.value);
     console.log(lastName.current.value);
     console.log(address.current.value);
+    if (isDoctor) {
+      console.log("Skills");
+      console.log(skillTags);
+    } else {
+      console.log("Conditions:");
+      console.log(conditionTags);
+    }
+  };
+
+  const handleAddTag = () => {
+    if (isDoctor && skill !== "") {
+      setSkillTags([...skillTags, skill]);
+      setSkill("");
+    }
+    if (!isDoctor && condition !== "") {
+      setConditionTags([...conditionTags, condition]);
+      setCondition("");
+    }
   };
 
   return (
     <Router history={history}>
       <div style={{ fontFamily: "Roboto" }}>
-        <button
-          onClick={() => history.push("/home")}
-          className="backButton btn"
-          style={{ backgroundColor: "red" }}
-        >
-          <span style={{ fontSize: 18 }}>
-            <i class="fa fa-arrow-left"></i>&nbsp;Back
-          </span>
-        </button>
-        <button
-          onClick={() => history.push("/home")}
-          className="backButton"
-          style={{ backgroundColor: "#006400" }}
-        >
-          <span style={{ fontSize: 18 }}>
-            <i class="fa fa-home"></i>&nbsp;Home
-          </span>
-        </button>
+        <NavBar />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ flexDirection: "column" }}>
             <div>
               <h1>Register An Account</h1>
-              <p>Email</p>
+              <p style={{ fontWeight: "bold" }}>Email</p>
               <input
                 type="email"
                 ref={email}
                 name="email"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
-              <p>Password</p>
+              <p style={{ fontWeight: "bold" }}>Password</p>
               <input
                 type="password"
                 ref={password}
                 name="password"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
-              <p>Confirm Password</p>
+              <p style={{ fontWeight: "bold" }}>Confirm Password</p>
               <input
                 type="password"
                 ref={confirmPassword}
                 name="confirm-password"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
-              <p>First Name</p>
+              <p style={{ fontWeight: "bold" }}>First Name</p>
               <input
                 type="text"
                 ref={firstName}
                 name="first-name"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
-              <p>Last Name</p>
+              <p style={{ fontWeight: "bold" }}>Last Name</p>
               <input
                 type="text"
                 ref={lastName}
                 name="last-name"
-                style={{ width: 300, height: 20 }}
+                style={{ width: 400, height: 20 }}
               />
-              <p>Address</p>
-              <input
+              <p style={{ fontWeight: "bold" }}>Address</p>
+              <textarea
                 type="text"
+                maxlength="200"
                 ref={address}
                 name="address"
-                style={{ width: 300, height: 20 }}
+                style={{
+                  width: 400,
+                  height: 100,
+                  overflowWrap: "break-word",
+                }}
               />
               <p>
+                <input
+                  type="checkbox"
+                  name="is-doctor"
+                  value={isDoctor}
+                  style={{ height: 15, width: 15 }}
+                  onChange={() => setIsDoctor(!isDoctor)}
+                />
+                <span style={{ fontWeight: "bold", color: "#006400" }}>
+                  Are you a doctor?
+                </span>
+              </p>
+              {isDoctor ? (
+                <div>
+                  <p style={{ fontWeight: "bold" }}>Your Expertise</p>
+                  <p style={{ fontStyle: "italic" }}>
+                    Ex: General, Dermatology, ...
+                  </p>
+                  <div>
+                    <input
+                      type="text"
+                      value={skillTags}
+                      onChange={(e) => setSkill(e.target.value)}
+                      style={{ width: 320, height: 20 }}
+                    />
+                    <button
+                      style={{ width: 80, height: 25 }}
+                      onClick={handleAddTag}
+                    >
+                      Add Tag
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p style={{ fontWeight: "bold" }}>Your Medical Conditions</p>
+                  <p style={{ fontStyle: "italic" }}>Ex: Cough, Flu, ...</p>
+                  <div>
+                    <input
+                      type="text"
+                      maxlength="25"
+                      value={condition}
+                      onChange={(e) => setCondition(e.target.value)}
+                      style={{ width: 320, height: 20 }}
+                    />
+                    <button
+                      style={{ width: 80, height: 25 }}
+                      onClick={handleAddTag}
+                    >
+                      Add Tag
+                    </button>
+                  </div>
+                  <p>
+                    {
+                      conditionTags.map((e) => (
+                      <span style={{ marginRight: 5 }}>
+                        <button>
+                          <span style={{ marginRight: 5 }}>{e}</span>
+                          <span style={{ color: "red", fontWeight: "bold" }}>
+                            X
+                          </span>
+                        </button>
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              )}
+              <p>
                 <button
-                  style={{ width: 100, height: 27 }}
+                  style={{
+                    width: 100,
+                    height: 27,
+                    color: "white",
+                    backgroundColor: "#006400",
+                  }}
                   onClick={handleSubmit}
                 >
                   REGISTER
@@ -101,7 +187,7 @@ const Register = () => {
                 Already have an account?&nbsp;&nbsp;
                 <span
                   onClick={() => history.push("/login")}
-                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                  style={{ textDecoration: "underline", cursor: "pointer", color: "#006400" }}
                 >
                   Login
                 </span>
