@@ -20,6 +20,8 @@ const Register = () => {
   const [skillTags, setSkillTags] = useState([]);
   const [condition, setCondition] = useState("");
   const [conditionTags, setConditionTags] = useState([]);
+  const [idSkill, setIdSkill] = useState(0);
+  const [idCondition, setIdCondition] = useState(0);
 
   const handleSubmit = () => {
     console.log(email.current.value);
@@ -39,33 +41,45 @@ const Register = () => {
 
   const handleAddTag = () => {
     if (isDoctor && skill !== "") {
-      setSkillTags([...skillTags, skill]);
+      setSkillTags([...skillTags, { id: idSkill, val: skill }]);
+      setIdSkill(idSkill + 1);
       setSkill("");
     }
     if (!isDoctor && condition !== "") {
-      setConditionTags([...conditionTags, condition]);
+      setConditionTags([...conditionTags, { id: idCondition, val: condition }]);
+      setIdCondition(idCondition + 1);
       setCondition("");
     }
   };
 
-  const handleRemoveTag = (e) => {
+  const handleEnterAddTag = (e) => {
+    if (e.key == "Enter") {
+      if (isDoctor && skill !== "") {
+        setSkillTags([...skillTags, { id: idSkill, val: skill }]);
+        setIdSkill(idSkill + 1);
+        setSkill("");
+      }
+      if (!isDoctor && condition !== "") {
+        setConditionTags([
+          ...conditionTags,
+          { id: idCondition, val: condition },
+        ]);
+        setIdCondition(idCondition + 1);
+        setCondition("");
+      }
+    }
+  };
+
+  const handleRemoveTag = (ele) => {
     if (isDoctor) {
-      const idx = skillTags.indexOf(e);
-      if (idx !== -1) {
-        skillTags.splice(idx, 1);
-        setSkillTags(conditionTags);
+      if (ele.id !== -1) {
+        setSkillTags(skillTags.filter((tag) => tag.id !== ele.id))
       }
     }
     if (!isDoctor) {
-      const idx = conditionTags.indexOf(e);
-      console.log(idx);
-      if (idx !== -1) {
-        conditionTags.splice(idx, 1);
-        setConditionTags(conditionTags);
-      }
-      else {
-        console.log(conditionTags);
-        setConditionTags(conditionTags);
+      console.log(ele.id);
+      if (ele.id !== -1) {
+        setConditionTags(conditionTags.filter((tag) => tag.id !== ele.id))
       }
     }
   };
@@ -161,7 +175,15 @@ const Register = () => {
                   <input
                     type="text"
                     maxlength="22"
-                    value={isDoctor ? skill : condition}
+                    value={
+                      isDoctor
+                        ? skill === null
+                          ? ""
+                          : skill
+                        : condition === null
+                        ? ""
+                        : condition
+                    }
                     placeholder="22 characters max"
                     onChange={(e) =>
                       isDoctor
@@ -169,6 +191,7 @@ const Register = () => {
                         : setCondition(e.target.value)
                     }
                     style={{ width: 320, height: 20 }}
+                    onKeyPress={handleEnterAddTag}
                   />
                   <button
                     style={{
@@ -187,29 +210,26 @@ const Register = () => {
                   }}
                 >
                   {isDoctor
-                    ? 
-                    skillTags.map((e) => (
-                      <span style={{ marginRight: 5 }}>
-                        <button onClick={() => handleRemoveTag(e)}>
-                          <span style={{ marginRight: 5 }}>{e}</span>
-                          <span style={{ color: "red", fontWeight: "bold" }}>
-                            X
-                          </span>
-                        </button>
-                      </span>
-                    ))
-                    : 
-                    conditionTags.map((e) => (
-                      <span style={{ marginRight: 5 }}>
-                        <button onClick={() => handleRemoveTag(e)}>
-                          <span style={{ marginRight: 5 }}>{e}</span>
-                          <span style={{ color: "red", fontWeight: "bold" }}>
-                            X
-                          </span>
-                        </button>
-                      </span>
-                    ))
-                  }
+                    ? skillTags.map((ele) => (
+                        <span style={{ marginRight: 5 }}>
+                          <button onClick={() => handleRemoveTag(ele)}>
+                            <span style={{ marginRight: 5 }}>{ele.val}</span>
+                            <span style={{ color: "red", fontWeight: "bold" }}>
+                              X
+                            </span>
+                          </button>
+                        </span>
+                      ))
+                    : conditionTags.map((ele) => (
+                        <span style={{ marginRight: 5 }}>
+                          <button onClick={() => handleRemoveTag(ele)}>
+                            <span style={{ marginRight: 5 }}>{ele.val}</span>
+                            <span style={{ color: "red", fontWeight: "bold" }}>
+                              X
+                            </span>
+                          </button>
+                        </span>
+                      ))}
                 </p>
               </div>
 
