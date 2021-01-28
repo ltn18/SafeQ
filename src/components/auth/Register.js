@@ -23,7 +23,8 @@ const Register = () => {
   const [idSkill, setIdSkill] = useState(0);
   const [idCondition, setIdCondition] = useState(0);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     console.log("OK");
     try {
       await console.log("KO");
@@ -232,7 +233,7 @@ const Register = () => {
                     color: "white",
                     backgroundColor: "#006400",
                   }}
-                  onClick={handleSubmit}
+                  onSubmit={handleSubmit}
                 >
                   REGISTER
                 </button>
