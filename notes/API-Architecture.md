@@ -9,7 +9,7 @@
 - uid: `int`
 - isDoctor: `boolean`
 - skills: `array` of strings
-- conditions: `array` of strings or `string`?
+- conditions: `array` of strings?
 - createdAt: `new Date()`
 
 ### Meeting
