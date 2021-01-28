@@ -23,20 +23,11 @@ const Register = () => {
   const [idSkill, setIdSkill] = useState(0);
   const [idCondition, setIdCondition] = useState(0);
 
-  const handleSubmit = () => {
-    console.log(email.current.value);
-    console.log(password.current.value);
-    console.log(confirmPassword.current.value);
-    console.log(firstName.current.value);
-    console.log(lastName.current.value);
-    console.log(address.current.value);
-    if (isDoctor) {
-      console.log("Skills");
-      console.log(skillTags);
-    } else {
-      console.log("Conditions:");
-      console.log(conditionTags);
-    }
+  const handleSubmit = async () => {
+    console.log("OK");
+    try {
+      await console.log("KO");
+    } catch (err) {console.log(err)}
   };
 
   const handleAddTag = () => {

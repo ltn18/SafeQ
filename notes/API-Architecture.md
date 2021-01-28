@@ -3,12 +3,14 @@
 ### User
 - email: `string`
 - password: `string`
-- name (first + last): `string`
+- firstName: `string`
+- lastName: `string`
 - address: `string`
-- firebase id: `int`
+- uid: `int`
 - isDoctor: `boolean`
 - skills: `array` of strings
 - conditions: `array` of strings or `string`?
+- createdAt: `new Date()`
 
 ### Meeting
 - members: `array` of ids or emails?
